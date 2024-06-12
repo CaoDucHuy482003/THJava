@@ -13,7 +13,7 @@
         <div class="col-7 mb-4">
             <label class="form-label" for="title">Title:</label>
             <input class="form-control" type="text" th:field="*{title}" id="title">
-            <!--<span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger"></span>-->
+            <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger"></span>
         </div>
         <div class="col-7 mb-4">
             <label class="form-label" for="author">Author:</label>
@@ -23,7 +23,7 @@
         <div class="col-7 mb-4">
             <label class="form-label" for="price">Price:</label>
             <input class="form-control" type="text" th:field="*{price}" id="price">
-            <!--<span th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="text-danger"></span>-->
+            <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="text-danger"></span>
         </div>
         <div class="col-7 mb-4">
             <label class="form-label" for="category">Category:</label>
@@ -32,7 +32,7 @@
                 <option th:each="category : ${category}" th:value="${category.id}"
                         th:text="${category.name}"></option>
             </select>
-            <!--<span th:if="${#fields.hasErrors('category')}" th:errors="*{category}" class="text-danger"></span>-->
+            <span th:if="${#fields.hasErrors('category')}" th:errors="*{category}" class="text-danger"></span>
         </div>
         <input type="submit" class="btn btn-primary" value="Thêm mới">
     </form>

@@ -13,9 +13,9 @@ public class BookSevice {
     @Autowired
     private IBookRepository bookRepository;
 
-    public List<Book> GetAllBooks() {
+/*    public List<Book> GetAllBooks() {
         return bookRepository.findAll();
-    }
+    }*/
 
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
