@@ -46,12 +46,12 @@ public class SecurityConfig {
                         .requestMatchers("/css/**", "/js/**", "/", "/register",
                                 "/error")
                         .permitAll()
-                        .requestMatchers("/books/edit", "/books/delete")
-                        .authenticated()
+                        .requestMatchers("/books/edit/*", "/books/delete/*")
+                        .hasAnyAuthority("Admin")
 
                         .requestMatchers("/books", "/books/add")
 
-                        .authenticated()
+                        .hasAnyAuthority("Admin", "User")
 
                         .anyRequest().authenticated()
 

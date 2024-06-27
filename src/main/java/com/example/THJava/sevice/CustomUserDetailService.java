@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomUserDetailService implements UserDetailsService {
 
+
     @Autowired
     private IuserRepository iuserRepository;
 
@@ -22,4 +23,5 @@ public class CustomUserDetailService implements UserDetailsService {
             throw  new UsernameNotFoundException("User not found");
         return new CustomUserDetail(user , iuserRepository);
     }
+
 }
